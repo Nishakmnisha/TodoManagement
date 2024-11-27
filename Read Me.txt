@@ -1,0 +1,109 @@
+Todo Task Manager
+
+A  Todo Task Management system with calender integration built with React for the frontend and a Django REST Framework (DRF) backend. This application allows users to manage tasks with CRUD (Create, Read, Update, Delete) functionality. The backend uses a MySQL database.
+
+Table of Contents
+
+•	Features
+•	Tech Stack
+•	Prerequisites
+•	Installation
+•	Backend Setup
+•	Frontend Setup
+•	API Endpoints
+
+Features
+
+•	User Authentication (Login/Register).
+•	CRUD functionality for tasks:
+•	Create new todos.
+•	View existing todos.
+•	Edit todo details.
+•	Delete todos.
+•	MySQL database integration.
+•	Responsive design using React.
+
+
+Techstack
+
+Frontend
+•	React (with Hooks)
+•	React Router DOM
+•	Axios (for API requests)
+•	Bootstrap
+Backend
+•	Django REST Framework
+•       Django corseheaders
+•	MySQL (via mysqlclient)
+•	Python 3.x
+
+
+Prerequisites
+
+Make sure the following are installed on your system:
+
+•	vite
+•	Python 3.x
+•	MySQL Server ( MariaDB 10.5+)
+•	Git
+
+Installation
+
+Backend Setup
+
+o	Set up a virtual environment:
+o	Virtualenv task_env
+o	task_env\Scripts\activate
+o	pip install django
+o	django-admin startproject projectname
+o	cd projectname
+o	py manage.py startapp appname
+o	pip install djangorestframework
+o	pip install django-cors-headers
+
+o       Configure the database:
+
+          Open server/taskproject/settings.py and update the DATABASES configuration:
+
+              DATABASES = {
+    '            default': {
+                 'ENGINE': 'django.db.backends.mysql',
+                 'NAME': 'database_name',
+                 'USER': 'root',
+                 'PASSWORD': 'your_password',
+                 'HOST': '127.0.0.1',
+                 'PORT': '3306',
+                }
+              }
+o       python manage.py makemigrations
+o       python manage.py migrate
+o	py manage.py runserver
+
+Frontend Setup
+
+o	npm i vite@latest
+o	npm create vite@latest
+o	projectname
+o	cd projectname
+o	npm install
+o	npm i react-router-dom
+o	npm i axios react-calender react-bootstrap react-toastify bootstrap 
+o       npm run dev
+
+    
+API Endpoints
+
+Method	Endpoint	        Description
+POST	/api/usermodel/	        Register a new user
+POST	/api/token/	        User login
+GET	/api/todomodel/	        Retrieve all tasks
+POST	/api/todomodel/	        Create a new task
+GET	/api/todomodel/<id>/	Retrieve a specific task
+PUT	/api/todomodel/<id>/	Update a specific task
+DELETE	/api/todomodel/<id>/	Delete a specific task
+
+
+
+
+
+
