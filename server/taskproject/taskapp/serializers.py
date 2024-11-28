@@ -13,10 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 
-class TaskSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Task
-        fields = ['id', 'title', 'description', 'status', 'due_date', 'user']
+
 
 class TodoSerializer(serializers.ModelSerializer):
     user=serializers.CharField(read_only=True)

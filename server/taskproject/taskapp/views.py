@@ -1,12 +1,9 @@
 from django.shortcuts import render
 from rest_framework.viewsets import ModelViewSet,ViewSet
-from .serializers import UserSerializer,TaskSerializer,TodoSerializer
+from .serializers import UserSerializer,TodoSerializer
 from .models import Task
 from rest_framework.response import Response
 from rest_framework import authentication,permissions
-# from rest_framework.authentication import authenticate
-# from rest_framework.authtoken.views import obtain_auth_token
-from rest_framework.views import APIView
 
 
 

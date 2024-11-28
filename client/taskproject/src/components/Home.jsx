@@ -74,13 +74,6 @@ return 0;
 });
 
 
-
-
-
-
-
-
-
   const renderSection = () => {
     if (activeSection === "list-view") {
       return (
@@ -125,10 +118,6 @@ return 0;
                   </select>
                 </label>
               </div>
-
-
-
-
 
 
           <div style={tasklist}>
@@ -245,6 +234,7 @@ const headerStyle = {
   backgroundColor: "#1976d2",
   color: "white",
   padding: "15px 0",
+  fontFamily:"bold"
 };
 
 const navStyle = {
@@ -259,6 +249,7 @@ const navLinkStyle = {
   margin: "0 15px",
   fontWeight: "bold",
   cursor: "pointer",
+  fontFamily:"bold"
 };
 
 const sectionStyle = {

@@ -5,7 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { userRegsiter } from '../apis/fetchapi';
 import { toast } from 'react-toastify';
-// import { useNavigate } from 'react-router-dom';
 function Register() {
   const navigate=useNavigate()
   const [regUser,setUserReg]=useState({
@@ -28,22 +27,80 @@ userRegsiter(regUser)
     }
   }
   return (
-    <div className='d-flex w-100 p-5 m-5 align-items-center justify-content-centetr'>
-        <div className='w-50 p-5'>
-        <h1 className='text-danger'>Regsiter Form</h1>
-            <FloatingLabel controlId="floatingInputGrid1" label="username" className='mt-3'>
-          <Form.Control type="text" placeholder="username" onChange={(e)=>{setUserReg({...regUser,username:e.target.value})}} />
+    
+    <div
+  className="d-flex align-items-center justify-content-center"
+  style={{
+    backgroundColor: "#f0f0f0",
+    minHeight: "100vh",
+    width: "100vw",
+    padding: "20px",
+  }}
+  
+>
+  <div
+    className="w-50 p-5 border shadow"
+    style={{
+      backgroundColor: "#ffffff",
+      borderRadius: "10px",
+      maxWidth: "500px",
+    }}
+  >
+    <h1
+      className="text-center"
+      style={{
+        // fontFamily: "Arial, sans-serif",
+        fontWeight: "bold",
+        color: "#007bff",
+        marginBottom: "30px",fontFamily:"bold"
+      }}
+    >
+      Register 
+    </h1>
+    <p style={{ fontStyle: 'italic', color: '#555', marginBottom: '20px' }}>
+    "Please fill out the fields below to create your account. Avoid spaces in your username."
+      </p>
+    <FloatingLabel controlId="floatingInputGrid1" label="username" className='mb-3'style={{fontFamily:"bold"}}>
+        <Form.Control type="text" placeholder="username"  style={{ borderColor: "#cccccc" }}onChange={(e)=>{setUserReg({...regUser,username:e.target.value})}} />
         </FloatingLabel>
-        <FloatingLabel controlId="floatingInputGrid2" label="email" className='mt-3'>
-          <Form.Control type="email" placeholder="abc@gmail.com" onChange={(e)=>{setUserReg({...regUser,email:e.target.value})}}/>
-        </FloatingLabel>
-        <FloatingLabel controlId="floatingInputGrid3" label="password" className='mt-3'>
-          <Form.Control type="password" placeholder="password" onChange={(e)=>{setUserReg({...regUser,password:e.target.value})}}/>
-        </FloatingLabel>
-        <div className='mt-5 d-flex justify-content-between'><button className='btn btn-success' onClick={(e)=>{formSubmit()}}>Register
-            </button>
-            <Link to={'/'}>Already have an account? Login here</Link></div></div>
+        
+        <FloatingLabel controlId="floatingInputGrid2" label="email" className='mb-3' style={{fontFamily:"bold"}}>
+         <Form.Control type="email" placeholder="abc@gmail.com" style={{ borderColor: "#cccccc" }} onChange={(e)=>{setUserReg({...regUser,email:e.target.value})}}/>
+         </FloatingLabel>
+         <FloatingLabel controlId="floatingInputGrid3" label="password" className='mb-3' style={{fontFamily:"bold"}}>
+           <Form.Control type="password" placeholder="password" style={{ borderColor: "#cccccc" }} onChange={(e)=>{setUserReg({...regUser,password:e.target.value})}}/>
+         </FloatingLabel>
+    
+    <div className="mt-5 d-flex justify-content-between align-items-center">
+      <button
+        className="btn btn-primary"
+        style={{
+          padding: "10px 20px",
+          fontWeight: "bold",
+          fontSize: "1rem",
+          fontFamily:"bold"
+        }}
+        
+
+        onClick={(e)=>{formSubmit()}}
+      >
+        Register
+      </button>
+      <Link
+        to="/login"
+        style={{
+          color: "#007bff",
+          textDecoration: "none",
+          fontWeight: "bold",
+          fontFamily:"bold"
+        }}
+      >
+        Already have an account? Login here
+      </Link>
     </div>
+  </div>
+</div>
+
   )
 }
 

@@ -9,13 +9,16 @@ import Home from './components/Home';
 import Add from './components/Add';
 import Edit from './components/Edit';
 import Detail from './components/Detail';
+import Homepage from './components/Homepage';
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <Routes>
-     <Route path="/" element={<Login/>}/>
+     <Route path="/" element={<Homepage/>}/>
+     <Route path="/login" element={<Login/>}/>
      <Route path="/register" element={<Register/>}/>
      <Route path="/home" element={<Home/>}/>
      <Route path="/add" element={<Add/>}/>
